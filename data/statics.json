@@ -666,6 +666,18 @@
                     "filename": "page2"
                 },
                 {
+                    "title": "State Machine",
+                    "filename": "page9"
+                },
+                {
+                    "title": "Simple Game State",
+                    "filename": "page10"
+                },
+                {
+                    "title": "Player Camera",
+                    "filename": "page5"
+                },
+                {
                     "title": "Character Movement Part 1",
                     "filename": "page3"
                 },
@@ -674,8 +686,52 @@
                     "filename": "page4"
                 },
                 {
-                    "title": "Player Camera",
-                    "filename": "page5"
+                    "title": "Import Meshes",
+                    "filename": "page6"
+                },
+                {
+                    "title": "Lanterns",
+                    "filename": "page7"
+                },
+                {
+                    "title": "Collisions & Triggers",
+                    "filename": "page8"
+                },
+                {
+                    "title": "Game GUI",
+                    "filename": "page11"
+                },
+                {
+                    "title": "Animations",
+                    "filename": "page12"
+                },
+                {
+                    "title": "Particle Systems",
+                    "filename": "page13"
+                },
+                {
+                    "title": "Music/SFX",
+                    "filename": "page14"
+                },
+                {
+                    "title": "Extra Features",
+                    "filename": "page15"
+                },
+                {
+                    "title": "Cross Platform - Mobile",
+                    "filename": "page16"
+                },
+                {
+                    "title": "Performance",
+                    "filename": "page17"
+                },
+                {
+                    "title": "Outro",
+                    "filename": "page18"
+                },
+                {
+                    "title": "Design Process, 3D Modeling, Art Assets",
+                    "filename": "page19"
                 }
             ]
         },

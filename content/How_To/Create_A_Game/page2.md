@@ -1,18 +1,16 @@
-# Getting Set Up
-
 ## Introduction
 This setup process is based off of the [NPM-support](/features/NPM_Support) documentation for getting started with Babylon.js and the [babylonjs webpack](https://github.com/RaananW/babylonjs-webpack-es6) sample project, but with a few additions and modifications. The setup of the project will probably be the hardest part!
 
 ## First Steps
-
 ### Creating A Project
 First you'll need to set up where you want the project to be located.
-1. Create a folder where you'll be storing your project files
-2. Set up the file folder structure to be something like this:
+1. Using the text editor of your choice, open up your project folder. I will be using Visual Studio Code for this series.
+2. Create a folder where you'll be storing your project files
+3. Set up the file folder structure to be something like this:
     - dist
     - public
     - src
-3. Main files
+4. Main files
     - Go into your src folder and create an app.ts file
     - Go into your public folder and create an index.html file
     - Your html file should look something like:
@@ -30,8 +28,11 @@ First you'll need to set up where you want the project to be located.
 Notice that we currently don't have anything within the body of our html file. We'll be generating a canvas within our app.ts file later on.
 
 ### Installing Babylon.js
-1. Using the text editor of your choice, open up your project folder. I will be using Visual Studio Code for this series.
-
+1. Generate the package.json
+```javascript
+npm init
+```
+You can fill these out now or just keep pressing *Enter* and fill these out in your package.json later.
 2. Open up the terminal (in VSCode you can do this by going to the top bar > Terminal > New Terminal).
 
 3. Install Babylon.js
@@ -64,18 +65,13 @@ This will create a default tsconfig.json. You can replace the contents with:
 }
 ```
 
-5. Generate the package.json
-```javascript
-npm init
-```
-
 ### Setting Up Webpack
 ** Installing Dependencies **  
 Now that we have our package.json generated, we need to install the dev dependencies for using webpack.
 ```javascript
 npm install --save-dev typescript webpack ts-loader webpack-cli
 ```
-
+(if this line doesn't work the first time, try one more time)
 ** Configure Webpack **  
 Now we will need to configure webpack to know what to do. Create a webpack.config.js file within your root directory. This is an example of what my configuration looks like:
 
@@ -161,7 +157,7 @@ Now when we build and run our project, if we make any updates, the browser will 
 ### Creating A Scene
 We'll be setting up the app.ts file to be the main entry point for our project.
 
-** Set up and create the App class **
+**Set up and create the App class**
 
 The App class will serve as our entire game application. This is a very simple example of how to set up a scene and should be separated out into different functions and make use of class variables for your project as you progress.
 
@@ -203,7 +199,6 @@ class App {
     }
 }
 new App();
-
 ```
 At this point, you should be seeing a lot of errors. This is because we haven't imported the babylonjs dependencies. Add to the top of your file:
 ```javascript
@@ -214,7 +209,7 @@ import { Engine, Scene, ArcRotateCamera, Vector3, HemisphericLight, Mesh, MeshBu
 ```
 
 ### Bundling the Project and Running Locally
-Now that we have our project set up, how do we run it locally? We need to set up tasks in our package.json. In your package.json add this:
+Now that we have our project set up, how do we run it locally? We need to set up tasks in our package.json. In your package.json replace your "scripts" with this:
 ```javascript
     "scripts": {
         "build": "webpack",
@@ -227,16 +222,18 @@ npm run build
 npm run start
 ```
 Then when you visit localhost:8080 in our browser, you should see a sphere!
-
 ### (Optional) Github for Version Control
 If you're working with a large project, you'll most likely want to keep it in a safe place in case your computer breaks, you lose your files, etc. Github is also very useful for keeping track of changes that you make and can make things a lot easier in case you need to bring back a previous version of your project. You can follow this to learn how to [add a project](https://docs.github.com/en/desktop/contributing-and-collaborating-using-github-desktop/adding-an-existing-project-to-github-using-github-desktop) using Github Desktop.
 
 # Further Reading
-
+[Github Game Repo](https://github.com/BabylonJS/SummerFestival)  
+**Previous:** [Introduction](/how_to/page1)  
+**Next:** [State Machine](/how_to/page9)
 ## How To
 [First Steps](/babylon101/first)  
 [How To Get Babylon.js](/babylon101/how_to_get)  
 [Npm Support](/features/NPM_Support)  
+[Sample Project](https://github.com/RaananW/babylonjs-webpack-es6)
 
 ## External
 [HTML Webpack Plugin](https://www.npmjs.com/package/html-webpack-plugin)  
